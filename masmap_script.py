@@ -116,6 +116,7 @@ class Nmap_Scanner:
 
 # @pysnooper.snoop()
 def split_task(ip): #split ports range in 5 pieces and return a list
+    ip = str(ip)
     if not re.match(r'\d+\.\d+\.\d+.\d+', ip):
         raise Exception("Invalid IP format: '"+ip+"'")
     ports_list = [str(x) for x in range(1,65536)]
